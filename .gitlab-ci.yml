@@ -5,19 +5,14 @@ before_script:
   - cmake --version
 
 stages:
-  - build
   - test
 
 job 1:
-  stage: build
+  stage: test
   script:
     - mkdir build
     - cd build
     - cmake ..
     - make
-
-job 3:
-  stage: test
-  script:
-    - cd build
     - ctest -V
+
