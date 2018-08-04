@@ -1,5 +1,5 @@
 before_script:
-  - apt-get update -qq && apt-get install cmake make g++
+  - apt-get update -qq && apt-get install -y -qq cmake make g++
   - uname -a
   - g++ --version
   - cmake --version
