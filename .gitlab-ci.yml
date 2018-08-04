@@ -1,8 +1,10 @@
 before_script:
-  - apt-get update -qq && apt-get install -y -qq cmake make g++
+  - apt-get update -qq && apt-get install -y -qq cmake make
   - uname -a
   - g++ --version
   - cmake --version
+
+image: "gcc:6"
 
 stages:
   - test
