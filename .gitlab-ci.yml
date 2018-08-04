@@ -1,0 +1,23 @@
+before_script:
+  - apt-get update -qq && apt-get install cmake make g++
+  - uname -a
+  - g++ --version
+  - cmake --version
+
+stages:
+  - build
+  - test
+
+job 1:
+  stage: build
+  script:
+    - mkdir build
+    - cd build
+    - cmake ..
+    - make
+
+job 3:
+  stage: test
+  script:
+    - cd build
+    - ctest -V
