@@ -1,6 +1,6 @@
 before_script:
-  - apt-get update -qq && apt-get install -y -qq cmake make
-  - cat /etc/debian_release
+  - apt-get -qq update && apt-get install -y -qq cmake make lsb-release
+  - lsb_release -a
   - g++ --version
   - cmake --version
 
