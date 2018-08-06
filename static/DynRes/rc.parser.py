@@ -91,7 +91,7 @@ while len(includes) > 0:
 
 static_res = ''
 with open('/'.join([dirname(argv[0]),'StaticResTemplate.cpp']), 'r') as sres:
-    static_res = sres.read().decode('utf-8')
+    static_res = sres.read()
 
 make_pair = '    std::make_pair({0},"{1}"),'
 tmpl_vals = {
